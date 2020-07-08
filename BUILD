@@ -30,7 +30,7 @@ cc_library(
         "s2regioncoverer.cc",
         "s2regionintersection.cc",
         "s2regionunion.cc",
-    ],
+    ] + glob(["*.h", "base/*.h", "strings/*.h", "util/math/*.h"]),
     hdrs = glob(["*.h", "base/*.h", "strings/*.h", "util/math/*.h"]) + ["util/hash/hash_jenkins_lookup2.h"],
     copts = [
         "-Wall",

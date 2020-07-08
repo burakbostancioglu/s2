@@ -1,6 +1,6 @@
 cc_library(
     name = "s2",
-    srcs = [
+    srcs =  glob(["*.h", "base/*.h", "strings/*.h", "util/math/*.h"]) + [
         "base/logging.cc",
         "strings/split.cc",
         "strings/stringprintf.cc",
@@ -30,7 +30,7 @@ cc_library(
         "s2regioncoverer.cc",
         "s2regionintersection.cc",
         "s2regionunion.cc",
-    ] + glob(["*.h", "base/*.h", "strings/*.h", "util/math/*.h"]),
+    ],
     hdrs = glob(["*.h", "base/*.h", "strings/*.h", "util/math/*.h"]) + ["util/hash/hash_jenkins_lookup2.h"],
     copts = [
         "-Wall",

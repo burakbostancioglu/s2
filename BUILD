@@ -47,31 +47,3 @@ cc_library(
     # deps = ["//openssl"],
     visibility = ["//visibility:public"],
 )
-
-cc_library(
-    name = "test",
-    srcs = ["s2testing.h", "s2testing.cc"],
-    deps = [":s2"],
-)
-
-load("//s2:s2test.bzl", "s2test")
-
-s2test("r1interval_test")
-s2test("s1angle_test")
-s2test("s1interval_test")
-s2test("s2_test")
-s2test("s2cap_test")
-s2test("s2cellid_test")
-s2test("s2cellunion_test")
-s2test("s2edgeindex_test")
-s2test("s2edgeutil_test")
-s2test("s2latlng_test")
-s2test("s2latlngrect_test")
-s2test("s2loop_test")
-s2test("s2pointregion_test")
-s2test("s2polygon_test")
-s2test("s2polygonbuilder_test")
-s2test("s2polyline_test")
-s2test("s2r2rect_test")
-s2test("s2regioncoverer_test")
-s2test("s2regionunion_test")
